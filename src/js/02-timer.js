@@ -54,11 +54,11 @@ refs.btnStart.addEventListener('click', () => {
       refs.minutes.textContent = addLeadingZero(timeObject.minutes);
       refs.seconds.textContent = addLeadingZero(timeObject.seconds);
       if (countdown <= 10000) {
-        timerHtml.style.color = 'tomato';
+        refs.timeContainer.style.color = 'red';
       }
     } else {
       Notiflix.Notify.success('Countdown finished');
-      timerHtml.style.color = 'black';
+      refs.timeContainer.style.color = 'black';
       clearInterval(timer);
     }
   }, 1000);
